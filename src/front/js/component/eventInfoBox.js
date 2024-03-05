@@ -68,8 +68,9 @@ export const EventInfoBox = () => {
 
     return (
         <div className="EventCard">
-            <h3> UPCOMING <strong> EVENTS:</strong></h3>
-            <br></br>
+            <div>
+                <h4 className="event-title">UPCOMING <strong> EVENTS:</strong></h4>
+            </div>
             <p>
                 <i className="fa-sharp fa-regular fa-calendar-days"></i> &nbsp;
                 <span className="event-day">DAY:</span> {eventDetails.day}</p>

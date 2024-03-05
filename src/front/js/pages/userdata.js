@@ -48,6 +48,7 @@ export const Userdata = () => {
               <button className="logout-button" onClick={logout}>LOGOUT</button>
             </div>
           </div>
+
           <div className="user-data-page-right">
             <TimeCounter />
             <div className="user-location-group">
@@ -55,10 +56,11 @@ export const Userdata = () => {
               <SubmitButton />
             </div>
           </div>
+          <div className="event-info-box">
+            <EventInfoBox />
+          </div>
+
         </div>
-      </div>
-      <div>
-        <EventInfoBox />
       </div>
     </div>
   )

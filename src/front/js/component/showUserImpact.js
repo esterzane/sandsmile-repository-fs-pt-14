@@ -22,11 +22,11 @@ export const ShowUserImpact = () => {
             <h3 className="user-impact"> YOUR IMPACT </h3>
             <div>
                 <p><strong>TOTAL</strong></p>
-                <p>Time <strong> {store.total_time}</strong> & Amount of <strong>{store.total_liters}</strong>L </p>
+                <p> TIME <strong> {store.total_time}</strong> & AMOUNT  <strong>{store.total_liters}</strong> Liters </p>
             </div>
             <div>
                 <p><strong>AVERAGE</strong></p>
-                <p>Time <strong>{store.average_time}</strong> & <strong>{store.average_liters}</strong>L per session </p>
+                <p>TIME <strong>{store.average_time}</strong> & <strong>{store.average_liters}</strong> LITERS per session </p>
             </div>
         </div>
     );
