@@ -78,7 +78,6 @@ def handle_get_users():
    all_users = User.query.all()
    all_users = [{
    "id": user.id,
-   "username": user.username,
    "email": user.email,
    "level": user.level,
    "stripe_link_integration": user.stripe_link_integration
