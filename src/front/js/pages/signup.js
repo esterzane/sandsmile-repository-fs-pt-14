@@ -24,9 +24,9 @@ export const Signup = () => {
    };
 
    const handleSubmit = async (formSignup) => {
-    // Iterate over the signup state object
+    
     for (let key in formSignup) {
-      // Check if the value of the current field is empty
+     
       if (!formSignup[key]) {
         alert(`Please fill in the ${key} field.`);
         return;
@@ -60,7 +60,6 @@ export const Signup = () => {
                 ref={formRef}
                 id='contact-form' className='form-signup'
                 onSubmit={(e) => { e.preventDefault(); handleSubmit(signup); }}>
-                    <input type="username" id="username" name="username" onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='name'/>
                     <input type="email" id="email" name="email" onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='e-mail'/>
                     <input type="password" id="password" name="password"  onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='password'/>
                     <input type="password" id="confirmPassword" name="confirmPassword" onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='confirm password'/>
