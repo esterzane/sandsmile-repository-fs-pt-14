@@ -77,9 +77,9 @@ export const TimeCounter = () => {
         <div className="counter-button">
 
           {!pending && <button type="buttonStart" className="counter-button btn btn-info btn-sm me-2" onClick={start}>
-            "Begin"
+            BEGIN
           </button>} {pending && <button type="buttonStart" className="counter-button btn btn-info btn-sm me-2" onClick={stop}>
-            "Stop "
+             STOP
           </button>}
         </div>
       </div>

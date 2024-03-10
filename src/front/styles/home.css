@@ -420,6 +420,22 @@ button {
   z-index: 1;
 }
 
+
+.event-info-box {
+  min-height: 550px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  right: 5%;
+  top: 20%;
+  background: rgba(61, 85, 82, 0.616);
+  max-width: 450px;
+  max-height: 450px;
+  padding: 32px;
+  z-index: 1;
+}
+
 /* Shared styles for user data items */
 .user-total-impact-data,
 .insert-data-container {
@@ -427,7 +443,8 @@ button {
   outline: 0;
   background: #80aca8;
   margin: 0 auto 25px auto;
-  padding: 25px;
+  padding: 15px;
+  margin-top: 5px; 
   box-sizing: border-box;
   font-size: 17px;
   color: #FFFFFF;
@@ -510,7 +527,26 @@ button {
   margin-bottom: 32px;
 }
 
-.user-data-group {}
+.user-data-group {
+
+}
+
+.event-title {
+  background-color: rgb(77, 156, 148);
+  border: 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 17px;
+  overflow: hidden;
+  margin: 10px 0 25px 0;  
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+}
 
 /* buttons */
 
@@ -549,6 +585,7 @@ button {
   justify-content: start;
   align-items: start;
   flex-direction: column;
+  padding-top: 77px;
 }
 
 .logout-button {
@@ -768,15 +805,6 @@ button {
 
 /* event and checkbox 
 */
-
-.EventCard {
-  background-color: rgb(77, 156, 148);
-  padding: 20px;
-  margin: 20px auto;
-  width: 600px;
-  color: #FFFFFF;
-  border: 7px solid rgba(129, 172, 168, 0.616);
-}
 
 .EventCard i {
   color: #dcb55d;
