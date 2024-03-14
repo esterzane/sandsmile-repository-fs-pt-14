@@ -38,27 +38,30 @@ export const Userdata = () => {
 
     <div>
       <NavBar />
-      <div className="hero ">
+      <div className="hero">
         <img className="hero__image" src={userdata_background} />
         <div className='user-data-group-box'>
-          <div className="user-data-page-left">
-            <UserLevelConnectLink />
-            <div className="user-impact-data">
-              <ShowUserImpact />
-              <button className="logout-button" onClick={logout}>LOGOUT</button>
+    
+            <div className="user-data-page-left">
+              <UserLevelConnectLink />
+              <div className="user-impact-data">
+                <ShowUserImpact />
+                <button className="logout-button" onClick={logout}>LOGOUT</button>
+              </div>
             </div>
-          </div>
 
-          <div className="user-data-page-right">
-            <TimeCounter />
-            <div className="user-location-group">
-              <InsertLocationLiters />
-              <SubmitButton />
+
+            <div className="user-data-page-right">
+              <TimeCounter />
+              <div className="user-location-group">
+                <InsertLocationLiters />
+                <SubmitButton />
+              </div>
             </div>
-          </div>
-          <div className="event-info-box">
-            <EventInfoBox />
-          </div>
+            <div className="event-info-box">
+              <EventInfoBox />
+            </div>
+        
 
         </div>
       </div>
