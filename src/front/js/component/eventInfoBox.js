@@ -71,23 +71,27 @@ export const EventInfoBox = () => {
             <div>
                 <h4 className="event-title">UPCOMING <strong> EVENTS:</strong></h4>
             </div>
-            <p>
-                <i className="fa-sharp fa-regular fa-calendar-days"></i> &nbsp;
-                <span className="event-day">DAY:</span> {eventDetails.day}</p>
-            <p>
-                <i className="fa-sharp fa-regular fa-clock"></i> &nbsp;
-                <span className="event-time">TIME:</span>{eventDetails.hour}</p>
-            <p>
-                <i className="fa-sharp fa-solid fa-location-dot"></i> &nbsp;
-                <span className="event-location">LOCATION: </span>{eventDetails.location}</p>
-            <p>
-                <i className="fa-sharp fa-solid fa-down-left-and-up-right-to-center"></i>&nbsp;
-                <span className="event-meeting-point">MEETING POINT:</span> {eventDetails.meeting_point}</p>
-            <label className="checkbox-container">
-                <input type="checkbox" id="myCheckbox" name="myCheckbox" onChange={handleCheckboxChange} checked={isChecked} />
-                <span className="label-text"><strong>COUNT ME IN!</strong></span>
-                <p className="clicks-count ms-4">SANDSMILERS IN: {clicksCount}</p>
-            </label>
+            <div className="event-wrapper">
+                <p>
+                    <i className="fa-sharp fa-regular fa-calendar-days"></i> &nbsp;
+                    <span className="event-day">DAY:</span> {eventDetails.day}</p>
+                <p>
+                    <i className="fa-sharp fa-regular fa-clock"></i> &nbsp;
+                    <span className="event-time">TIME:</span>{eventDetails.hour}</p>
+                <p>
+                    <i className="fa-sharp fa-solid fa-location-dot"></i> &nbsp;
+                    <span className="event-location">LOCATION: </span>{eventDetails.location}</p>
+                <p>
+                    <i className="fa-sharp fa-solid fa-down-left-and-up-right-to-center"></i>&nbsp;
+                    <span className="event-meeting-point">MEETING POINT:</span> {eventDetails.meeting_point}</p>
+                <label className="checkbox-container">
+                    <input type="checkbox" id="myCheckbox" name="myCheckbox" onChange={handleCheckboxChange} checked={isChecked} />
+                    <span className="label-text"><strong>COUNT ME IN!</strong></span>
+                    <div className="sandsmilers-in-info">
+                        <p> SANDSMILERS IN: {clicksCount}</p>
+                    </div>
+                </label>
+            </div>
         </div>
     );
 };
