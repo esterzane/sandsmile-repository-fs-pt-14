@@ -11,6 +11,7 @@ export const Signup = () => {
   
   const [signup, setSignup]=useState(store.formSignup)
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [passwordWarning, setPasswordWarning] = useState('');
 
   const goToLogin=useNavigate()
   const formRef= useRef (null)
@@ -24,9 +25,14 @@ export const Signup = () => {
    };
 
    const handleSubmit = async (formSignup) => {
-    // Iterate over the signup state object
+    
+    if (formSignup.password.length < 5) {
+      setPasswordWarning('Password must be at least 5 characters long.');
+      return; 
+    }
+
     for (let key in formSignup) {
-      // Check if the value of the current field is empty
+     
       if (!formSignup[key]) {
         alert(`Please fill in the ${key} field.`);
         return;
@@ -60,9 +66,9 @@ export const Signup = () => {
                 ref={formRef}
                 id='contact-form' className='form-signup'
                 onSubmit={(e) => { e.preventDefault(); handleSubmit(signup); }}>
-                    <input type="username" id="username" name="username" onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='name'/>
                     <input type="email" id="email" name="email" onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='e-mail'/>
                     <input type="password" id="password" name="password"  onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='password'/>
+                    {passwordWarning && <div className="password-warning text-white">{passwordWarning}</div>}
                     <input type="password" id="confirmPassword" name="confirmPassword" onChange={(e)=>(handleInputForm(e.target.value, e.target.name))} required placeholder='confirm password'/>
                     <button type="button" onClick={()=>handleSubmit(signup)}><strong>Sign Up</strong></button>
                 </form>  

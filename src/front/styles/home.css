@@ -388,6 +388,15 @@ button {
   justify-content: space-evenly;
 }
 
+@media only screen and (max-width: 768px) {
+  .user-data-group-box {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    max-width: 1000px ;
+  }
+}
+
 /* Left side */
 .user-data-page-left {
   min-height: 550px;
@@ -400,6 +409,7 @@ button {
   top: 20%;
   background: rgba(61, 85, 82, 0.616);
   padding: 32px;
+  margin-top: 30px;
   max-width: 300px;
   z-index: 1;
 }
@@ -407,9 +417,23 @@ button {
 /* Right side */
 .user-data-page-right {
   min-height: 550px;
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  right: 5%;
+  top: 25%;
+  background: rgba(61, 85, 82, 0.616);
+  max-width: 600px;
+  max-height: 600px;
+  padding: 32px;
+  margin-top: 30px;
+  z-index: 1;
+
+}
+
+
+.event-info-box {
+  min-height: 550px;
+  align-items: left;
   justify-content: center;
   right: 5%;
   top: 20%;
@@ -417,23 +441,19 @@ button {
   max-width: 600px;
   max-height: 600px;
   padding: 32px;
+  margin-top: 30px;
   z-index: 1;
 }
 
-
-.event-info-box {
-  min-height: 550px;
+.wrapper {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  right: 5%;
-  top: 20%;
-  background: rgba(61, 85, 82, 0.616);
-  max-width: 450px;
-  max-height: 450px;
-  padding: 32px;
-  z-index: 1;
+}
+
+.event-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
 }
 
 /* Shared styles for user data items */
@@ -444,7 +464,7 @@ button {
   background: #80aca8;
   margin: 0 auto 25px auto;
   padding: 15px;
-  margin-top: 5px; 
+  margin-top: 5px;
   box-sizing: border-box;
   font-size: 17px;
   color: #FFFFFF;
@@ -479,7 +499,6 @@ button {
   border: 0;
   box-sizing: border-box;
   color: #ffffff;
-  display: flex;
   align-items: center;
   justify-content: center;
   font-size: 17px;
@@ -488,7 +507,7 @@ button {
   text-align: center;
   text-decoration: none;
   position: relative;
-  margin: 0;
+
 }
 
 .time-counter-cta {
@@ -527,9 +546,7 @@ button {
   margin-bottom: 32px;
 }
 
-.user-data-group {
-
-}
+.user-data-group {}
 
 .event-title {
   background-color: rgb(77, 156, 148);
@@ -541,7 +558,7 @@ button {
   justify-content: space-evenly;
   font-size: 17px;
   overflow: hidden;
-  margin: 10px 0 25px 0;  
+  margin: 10px 0 25px 0;
   padding: 15px;
   text-align: center;
   text-decoration: none;
@@ -808,6 +825,7 @@ button {
 
 .EventCard i {
   color: #dcb55d;
+  height: 100%;
 }
 
 .checkbox-container {
@@ -852,11 +870,16 @@ button {
 }
 
 .clicks-count {
-  margin: 0;
   color: #FFFFFF;
   font-size: 12px;
 }
 
+.sandsmilers-in-info {
+  margin-top: 25px;
+  margin-left: 25px;
+  color: #FFFFFF;
+  font-size: 12px;
+}
 
 /*
   donations page
