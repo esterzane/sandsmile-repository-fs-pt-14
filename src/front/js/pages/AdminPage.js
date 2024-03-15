@@ -16,6 +16,8 @@ export const AdminPage = () => {
   const [link, setLink] = useState("");
   const [userLevel, setUserLevel] = useState(null)
   const [userToken, setUserToken] = useState("");
+
+
     const navigate = useNavigate();
     useEffect(() => {
       const userToken = localStorage.getItem("userToken");
@@ -55,6 +57,7 @@ export const AdminPage = () => {
    const handlePromote = () => {
     const adminRouteRequirement = "/api/admin";
     const url = `${process.env.BACKEND_URL}${adminRouteRequirement}`;
+    
     fetch(url, {
       method: 'PUT',
       headers: {
@@ -101,6 +104,8 @@ export const AdminPage = () => {
    if (loading) {
       return <div>Loading...</div>;
    }
+
+   
    const handleSubmit = (event) => {
     event.preventDefault();
     const adminRouteRequirement = "/api/event";
@@ -138,6 +143,10 @@ export const AdminPage = () => {
   if (userLevel !== 3) {
     return <div>Access denied. Only users with level 3 can access this page.</div>;
   }
+
+  const handleEmailChange = (event) => {
+    setSelectedEmail(event.target.value);
+ };
    return (
     <div className="admin-page">
       <NavBar />
@@ -145,12 +154,17 @@ export const AdminPage = () => {
         <h3 className="upgrade mt-4 ms-4 text-left">Upgrade user level</h3>
 
         <div className="infoblock row align-items-start pt-4 px-2">
-          <p className="mb-1 text-muted">Select a user email to promote for the next level, and insert Stripe Connect Link</p>
+          <p className="mb-1 text-muted">Type a user email to promote for the next level, and insert Stripe Connect Link</p>
           <div className="col">
             <div className="dropdown">
-              <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                {selectedEmail ? selectedEmail : "Select email"}
-              </button>
+            <input
+        type="email"
+        className="btn btn-secondary dropdown-toggle"
+        id="dropdownMenuButton"
+        value={selectedEmail}
+        onChange={handleEmailChange}
+        placeholder="Select email"
+      />
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 {users.map(user => (
                   <li key={user.email}>
