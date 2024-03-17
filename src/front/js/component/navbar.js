@@ -9,9 +9,14 @@ export const NavBar = () => {
 					<a href="/">
 						<img src={logo} className="nav__logo"/>
 					</a>
-					<Link to="/signuplogin" className="nav__btn round">
-						<span>CLEANERS</span>
-					</Link>
+					<div>
+						<Link to="/donation " className="donations__button btn">
+							<span>GET INVOLVED AND DONATE</span>
+						</Link>
+						<Link to="/signuplogin" className="nav__btn round">
+							<span>CLEANERS</span>
+						</Link>
+					</div>
 				</div>
 			</nav>
 		);

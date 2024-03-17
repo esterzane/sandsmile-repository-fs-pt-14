@@ -62,7 +62,7 @@ a {
 
 .nav__btn:hover,
 .nav__btn:focus {
-  background-color: rgb(77, 156, 148);
+  background-color: rgb(120, 196, 206);
   color: #ffffff;
 }
 
@@ -108,6 +108,12 @@ a {
   font-size: 17px;
 }
 
+.user_plus {
+  font-size: 29px;
+  text-align: center;
+  color: rgb(77, 156, 148);
+}
+
 /* 
     donations
 */
@@ -118,13 +124,25 @@ a {
 
 .donations__button {
   font-size: 20px;
+  border-radius: 0;
+  margin-right: 10px;
 }
 
 .btn {
-  color: #fff;
-  background-color: #dcb55d;
-  border-radius: 0px;
+  align-items: center;
+  background-color: #dcb65de5;
+  border: 0PX;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 20px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  width: 400px;
+  height: 40px;
 }
+
 
 .btn:hover,
 .btn:focus,
@@ -169,11 +187,12 @@ a {
 
 .info__img {
   width: 425px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 button {
@@ -393,7 +412,7 @@ button {
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
-    max-width: 1000px ;
+    max-width: 1000px;
   }
 }
 
@@ -888,14 +907,14 @@ button {
 
 .donate-box {
   position: relative;
-  background: #b99d23a3;
-  max-width: 360px;
+  background: rgba(77, 156, 148, 0.897);
+  max-width: 650px;
   margin: 0 auto 100px;
   padding: 45px;
   text-align: center;
 
-  p:nth-of-type(2) {
-    font-size: 10px;
+  p:nth-of-type(3) {
+    font-size: 12px;
   }
 }
 
@@ -907,7 +926,7 @@ h5 {
 .donate-box input {
   outline: 0;
   background: #f2f2f2;
-  width: 100%;
+  width: 50%;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
@@ -918,8 +937,8 @@ h5 {
 .donate-box button {
   text-transform: uppercase;
   outline: 0;
-  background: #dcb55d;
-  width: 100%;
+  background: #dcb65de5;
+  width: 50%;
   border: 0;
   margin: 0 0 15px;
   padding: 15px;
