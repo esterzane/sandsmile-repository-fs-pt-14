@@ -52,7 +52,10 @@ export const Payment = () => {
 				    <img className="hero__image" src={Image4} />
               <div className="container donate-box ">
                 <h5><strong>JOIN THE CLEANUP!</strong></h5>
-                <p>Please enter the amount in <strong>euros</strong> you wish to donate to our cause</p>
+                <p>Make a difference today, for a clean ocean and a healthy planet. Your donation will be used to organize new clean-up events on Portugal's beaches, hold awareness-raising sessions and reward our smiling cleaners who show the greatest passion for the activity.
+                </p>
+                <p>
+                With our activity, we will contribute to an active role in cleaning up our oceans, protecting marine life and combating the climate crisis.</p>
                 <AmountSubmit setParentAmount={setAmount} /> {}
                 {clientSecret && stripePromise && (
                   <Elements stripe={stripePromise} options={{ clientSecret }} >
@@ -66,5 +69,7 @@ export const Payment = () => {
     </>
  );
 };
+
+
 
 
