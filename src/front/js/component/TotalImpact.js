@@ -24,23 +24,24 @@ export const TotalImpact = () => {
 
 	return (
 		<div className="info container mt-5 mb-5 overflow-hidden">
-			<h3><strong>OUR IMPACT IN THE WORLD</strong></h3>
 			<div className="info__bubbles">
 				<div className="info__bubble">
 					<div className="info__blob">
-						<strong>{store.total_users}50</strong>cleaners registered on our platform
+						<h1><strong>{store.total_users}125</strong></h1>
+						<p>CLEANERS REGISTERED ON OUR PLATFORM</p>
 					</div>
 				</div>
 				<div className="info__bubble">
 					<div className="info__blob">
-						<strong>{store.total_impact_liters}5000</strong>liters collected from our shores
+						<h1><strong>{store.total_impact_liters}5725</strong></h1>
+						<p>LITERS COLLECTED FROM OUR SHORES</p>
 					</div>
 				</div>
 				<div className="info__bubble">
 					<div className="info__blob">
-						<strong>{store.total_impact_time}5000</strong>time dedicated to the cause
+						<h1><strong>{store.total_impact_time}8100</strong></h1>
+						<p>HOURS DEDICATED TO THE COUSE</p>
 					</div>
-
 				</div>
 			</div>
 		</div>

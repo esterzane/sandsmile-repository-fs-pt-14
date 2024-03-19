@@ -97,6 +97,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: -1;
 }
 
 
@@ -109,7 +110,7 @@ a {
 }
 
 .user_plus {
-  font-size: 29px;
+  font-size: 22px;
   text-align: center;
   color: rgb(77, 156, 148);
 }
@@ -159,6 +160,7 @@ a {
 .info__bubbles {
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 
 .info__bubble {
@@ -166,6 +168,8 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 675px;
+  padding-bottom: 15px;
 }
 
 .info__bubble>*+* {
@@ -174,15 +178,21 @@ a {
 
 .info__blob {
   width: 425px;
+  height: 175px;
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(129, 172, 168);
+  background: rgba(61, 85, 82, 0.616);
   color: white;
-  font-size: 20px;
-  border-radius: 20px;
+  font-size: 17px;
+  border-radius: 0px;
+
+  h1{
+    font-size: 100px;
+    justify-content: left;
+  }
 }
 
 .info__img {
