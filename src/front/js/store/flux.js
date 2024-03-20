@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ ...store, manual_finish_time: manual_finish_time });
 			},
 
-			
+
 
 			setLiters: (value) => {
 				const store = getStore()
@@ -151,19 +151,44 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			set_user_id: async () => {
-				setStore({ current: data.userdata_id })
+			start_time: async () => {
+				const url = process.env.BACKEND_URL;
+				const tokenRequirement = "/api/userdata";
+
+				try {
+					const response = await fetch(url + tokenRequirement, {
+						method: 'POST',
+						headers: {
+							'Authorization': `Bearer ${localStorage.getItem("userToken")}`,
+							'Content-Type': 'application/json',
+						},
+						body: JSON.stringify({
+							start_time: new Date().toISOString(),
+						})
+					});
+
+					if (response.status !== 200) {
+						throw new Error(`Error: ${response.status}`);
+					}
+
+					const data = await response.json();
+					console.log(data);
+					setStore({ current: data.userdata_id })
+				} catch (error) {
+					console.error(error);
+				}
 			},
 
-			submitData: async () => {
+
+			submitData: async (start_time, finish_time, location, liters) => {
 				const url = process.env.BACKEND_URL;
 				const tokenRequirement = "/api/userdata/" + getStore().current;
 
 				const requestBody = {
-							start_time: getStore().start_time,
-							finish_time: getStore().finish_time,
-							location: getStore().location,
-							liters: getStore().liters,
+					start_time: getStore().start_time,
+					finish_time: getStore().finish_time,
+					location: getStore().location,
+					liters: getStore().liters,
 				};
 				console.log(getStore().start_time, getStore().finish_time, getStore().location, getStore().liters)
 
@@ -171,7 +196,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const response = await fetch(url + tokenRequirement, {
 						method: 'PUT',
-						mode: 'cors',
 						headers: {
 							'Authorization': `Bearer ${localStorage.getItem("userToken")}`,
 							'Content-Type': 'application/json',
@@ -194,11 +218,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-
 			submit_manual_data: async () => {
 				const url = process.env.BACKEND_URL;
 				const tokenRequirement = "/api/userdata";
-				
+
 				try {
 					const response = await fetch(url + tokenRequirement, {
 						method: 'POST',
@@ -291,10 +314,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-}
+		}
 
 
 	}
 };
 
-	export default getState;
+export default getState;

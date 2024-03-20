@@ -69,7 +69,7 @@ export const EventInfoBox = () => {
     return (
         <div className="EventCard">
             <div>
-                <h4 className="event-title">UPCOMING <strong> EVENTS:</strong></h4>
+                <h4 className="event-title">UPCOMING <strong> EVENTS</strong></h4>
             </div>
             <div className="event-wrapper">
                 <p className="events_main_text">
