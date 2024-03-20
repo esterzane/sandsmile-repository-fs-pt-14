@@ -9,9 +9,9 @@ export const NavBar = () => {
 					<a href="/">
 						<img src={logo} className="nav__logo"/>
 					</a>
-					<div>
+					<div className="nav_bar_buttons">
 						<Link to="/donation " className="donations__button btn">
-							<span>GET INVOLVED AND DONATE</span>
+							<span>GET INVOLVED: DONATE</span>
 						</Link>
 						<Link to="/signuplogin" className="nav__btn round">
 							<span>CLEANERS</span>
