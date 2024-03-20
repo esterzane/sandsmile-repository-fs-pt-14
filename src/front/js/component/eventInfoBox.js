@@ -72,25 +72,25 @@ export const EventInfoBox = () => {
                 <h4 className="event-title">UPCOMING <strong> EVENTS:</strong></h4>
             </div>
             <div className="event-wrapper">
-                <p>
+                <p className="events_main_text">
                     <i className="fa-sharp fa-regular fa-calendar-days"></i> &nbsp;
                     <span className="event-day">DAY:</span> {eventDetails.day}</p>
-                <p>
+                <p className="events_main_text">
                     <i className="fa-sharp fa-regular fa-clock"></i> &nbsp;
-                    <span className="event-time">TIME:</span>{eventDetails.hour}</p>
-                <p>
+                    <span className="event-time">TIME:</span> {eventDetails.hour}</p>
+                <p className="events_main_text">
                     <i className="fa-sharp fa-solid fa-location-dot"></i> &nbsp;
-                    <span className="event-location">LOCATION: </span>{eventDetails.location}</p>
-                <p>
+                    <span className="event-location">LOCATION: </span> {eventDetails.location}</p>
+                <p className="events_main_text">
                     <i className="fa-sharp fa-solid fa-down-left-and-up-right-to-center"></i>&nbsp;
                     <span className="event-meeting-point">MEETING POINT:</span> {eventDetails.meeting_point}</p>
                 <label className="checkbox-container">
                     <input type="checkbox" id="myCheckbox" name="myCheckbox" onChange={handleCheckboxChange} checked={isChecked} />
                     <span className="label-text"><strong>COUNT ME IN!</strong></span>
-                    <div className="sandsmilers-in-info">
-                        <p> SANDSMILERS IN: {clicksCount}</p>
-                    </div>
                 </label>
+                <div className="sandsmilers-in-info">
+                    <p> SANDSMILERS IN: {clicksCount}</p>
+                </div>
             </div>
         </div>
     );
