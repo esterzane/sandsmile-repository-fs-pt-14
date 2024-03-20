@@ -10,11 +10,12 @@ export const SubmitButton = () => {
     const handleSubmit = async () => {
 
         try {
+            actions.setLiters;
+            actions.setLocation;
 
             if (store.start_time && store.finish_time && store.location && store.liters) {
                 actions.submitData();
             }
-
 
         } catch (error) {
             console.error("An error occurred while submitting data: ", error);

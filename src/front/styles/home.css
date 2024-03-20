@@ -430,6 +430,7 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  margin-top: 100px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -696,6 +697,11 @@ button {
     0.5px 0.5px 0 #a84e32;
 }
 
+.events_main_text {
+  color: #dcb55d;
+  font-weight: bold;
+}
+
 /* icons 
 */
 .fa-sharp {
@@ -876,6 +882,7 @@ button {
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-top: 25px;
 }
 
 .checkbox-container input[type="checkbox"] {
@@ -919,10 +926,13 @@ button {
 }
 
 .sandsmilers-in-info {
-  margin-top: 25px;
-  margin-left: 25px;
+  margin-top: 35px;
+  margin-left: 65px;
   color: #FFFFFF;
   font-size: 12px;
+  font-weight: 350;
+  justify-content: left;
+
 }
 
 /*
