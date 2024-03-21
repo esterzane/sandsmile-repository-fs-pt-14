@@ -47,7 +47,7 @@ export const Home = () => {
 					</p>
 			</div>
 			<div className="about container mt-5 mb-5 overflow-hidden">
-				<h3><strong>BE SOCIALLY RESPONSIBLE INVESTOR </strong></h3>
+				<h3><strong>BE SOCIALLY RESPONSIBLE CITIZEN</strong></h3>
 					<p>Make a difference today, for the well-being of the ocean and future of the planet. 
 					</p>
 					<p>Your donation, as a socially responsible company and/or individual,  will be used to hold awareness-raising sessions, organize community clean-up events on Portugal's beaches, and reward our smiling cleaners who show the greatest dedication to the activity.

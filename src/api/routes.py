@@ -33,12 +33,14 @@ CORS(api,origins='*')
 @api.route('/signup', methods=['POST'])
 def create_user():
     email = request.json.get("email")
+    username = request.json.get("username")
     password = request.json.get("password")
     secure_password = get_hash(
         password)
     
     new_user = User()
     new_user.email = email
+    new_user.username = username
     new_user.password = secure_password
     new_user.is_active = True
     db.session.add(new_user)
@@ -78,6 +80,7 @@ def handle_get_users():
    all_users = User.query.all()
    all_users = [{
    "id": user.id,
+   "username": user.username,
    "email": user.email,
    "level": user.level,
    "stripe_link_integration": user.stripe_link_integration
@@ -402,5 +405,3 @@ def handle_get_stripe_kink():
         return jsonify({"stripe_link_integration": user.stripe_link_integration}), 200
     except Exception as e:
         return jsonify({"msg": str(e)}), 500
-    
-
