@@ -24,6 +24,7 @@ export const UserInsertData = () => {
             setLiters(e.target.value);
         }
     };
+    
 
     return (
         <div className="userInsertData container-fluid">

@@ -27,19 +27,19 @@ export const TotalImpact = () => {
 			<div className="info__bubbles">
 				<div className="info__bubble">
 					<div className="info__blob">
-						<h1><strong>{store.total_users}125</strong></h1>
+						<h1><strong>{store.total_users}</strong></h1>
 						<p>CLEANERS REGISTERED ON OUR PLATFORM</p>
 					</div>
 				</div>
 				<div className="info__bubble">
 					<div className="info__blob">
-						<h1><strong>{store.total_impact_liters}5725</strong></h1>
+						<h1><strong>{store.total_impact_liters}</strong></h1>
 						<p>LITERS COLLECTED FROM OUR SHORES</p>
 					</div>
 				</div>
 				<div className="info__bubble">
 					<div className="info__blob">
-						<h1><strong>{store.total_impact_time}8100</strong></h1>
+						<h1><strong>{store.total_impact_time}</strong></h1>
 						<p>HOURS DEDICATED TO THE COUSE</p>
 					</div>
 				</div>
