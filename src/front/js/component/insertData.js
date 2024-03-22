@@ -1,23 +1,5 @@
-import React, { useContext } from "react";
-import { Context } from "../store/appContext";
-
 export const InsertData = () => {
     const { store, actions } = useContext(Context);
-
-    if (store.start_time === null) {
-        actions.setStartTime([]);
-    }
-    if (store.finish_time === null) {
-        actions.setFinishTime([]);
-    };
-
-    const handleStartTimeChange = (e) => {
-        actions.setStartTime(e.target.value);
-    };
-
-    const handleFinishTimeChange = (e) => {
-        actions.setFinishTime(e.target.value);
-    };
 
     return (
         <div className="card container-fluid col-sm-8 col-md-8 col-lg-8 bg-body-tertiary text-center p-1">
@@ -29,7 +11,7 @@ export const InsertData = () => {
                 </button>
                 <ul className="dropdown-menu">
                     <li>
-                    <input
+                        <input
                             type="datetime-local"
                             id="start_time"
                             className="form-control"
@@ -39,7 +21,7 @@ export const InsertData = () => {
                         />
                     </li>
                     <li>
-                    <input
+                        <input
                             type="datetime-local"
                             id="finish_time"
                             className="form-control"
